@@ -1,8 +1,4 @@
-from toolkit.errors import (
-    AbsoluteZeroError,
-    IncompatibleUnitsError,
-    UnknownUnitError
-    )
+from toolkit.errors import AbsoluteZeroError, IncompatibleUnitsError, UnknownUnitError
 
 LEN_M = {'mm': 0.001, 'cm': 0.01, 'm': 1.0, 'km': 1000.0} # длина в метрах
 MASS_G = {'g': 1.0, 'kg': 1000.0} # масса в граммах

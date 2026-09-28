@@ -1,4 +1,5 @@
 import pytest
+
 from toolkit.calculator import calculate
 from toolkit.errors import (
     ConsecutiveOperatorsError,
@@ -7,8 +8,9 @@ from toolkit.errors import (
     InvalidCharacterError,
     MissingOperandError,
     MissingOperatorError,
-    TooManyDotsError
+    TooManyDotsError,
 )
+
 
 # позитивные тесты
 def test_simple_add():

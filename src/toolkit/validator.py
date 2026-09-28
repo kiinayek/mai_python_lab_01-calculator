@@ -1,8 +1,9 @@
 from toolkit.errors import (
     EmptyExpressionError,
     MissingOperandError,
-    MissingOperatorError
+    MissingOperatorError,
 )
+
 
 def validate(tokens):
 
