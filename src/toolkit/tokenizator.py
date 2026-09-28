@@ -27,6 +27,8 @@ def tokenize_fsm(expr):
     Состояния: START, NUMBER, OPERATOR, AFTER_NUM
     unary_sign - унарный +/-,
     flag = True - только что был унарный знак """
+
+    expr = expr.replace('-(', '-1*(')
     
     tokens = []
     state = 'START'

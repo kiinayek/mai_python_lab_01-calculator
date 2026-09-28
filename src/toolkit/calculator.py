@@ -80,27 +80,27 @@ def eval_RPN(rpn):
         else:
             num_2, num_1 = stack.pop(), stack.pop()
             if char == '+':
-                stack.push(num_1 + num_2)
+                stack.push(round(num_1 + num_2, 10))
             elif char == '-':
-                stack.push(num_1 - num_2)
+                stack.push(round(num_1 - num_2, 10))
             elif char == '*':
-                stack.push(num_1 * num_2)
+                stack.push(round(num_1 * num_2, 10))
             elif char == '/':
                 if num_2 in [0, 0.0]:
                     raise DivisionByZeroError()
-                stack.push(num_1 / num_2)
+                stack.push(round(num_1 / num_2, 10))
             elif char == '//':
                 if num_2 == 0:
                     raise DivisionByZeroError()
                 if type(num_1) != int or type(num_2) != int:
                     raise InvalidCharacterError('//')
-                stack.push(num_1 // num_2)
+                stack.push(round(int(num_1 / num_2), 10))
             elif char == '%':
                 if num_2 == 0:
                     raise DivisionByZeroError()
                 if type(num_1) != int or type(num_2) != int:
                     raise InvalidCharacterError('%')
-                stack.push(num_1 % num_2)
+                stack.push(round(num_1 % num_2, 10))
 
     if len(stack.items) != 1:
         raise MissingOperandError('Ошибка: некорректное выражение')
